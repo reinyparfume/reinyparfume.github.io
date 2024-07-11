@@ -11,6 +11,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
      <style>
      	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
 
@@ -118,8 +119,7 @@ border: solid 1px #0066cc;
   width: 100%;
   border-radius: 10px;
 }
-.container {
-  padding: 2px 16px;
+
 }
      </style>
 </head>
@@ -136,25 +136,26 @@ border: solid 1px #0066cc;
 	<div class="col-md-12">
 	<div class="card">
   <div class="container">
-    <h4 style="color:#ffffff;font-size: 16px;"><b>Variant Dior Sauvage (Cowok)</b></h4> 
+    <h4 style="color:#ffffff;font-size: 16px;"><b>Variant Dior Sauvage 30ML (Cowok)</b></h4> 
     <center>
     <img src="images/v-dior-sauvage.jpg" alt="Reiny Parfume Logo" style="width:30%;">
     </center>
     </br>
-    <h4 style="color:#ffffff;font-size: 16px;"><b>Variant Zhuxin (Cewek)</b></h4> 
+    <h4 style="color:#ffffff;font-size: 16px;"><b>Variant Zhuxin 30 ML (Cewek)</b></h4> 
     <center>
     <img src="images/v-zhuxin.jpg" alt="Reiny Parfume Logo" style="width:30%;">
     </center>
     </br>
     <p style="color:#ffffff;">Cocok untuk indoor outdoor yang sering bepergian siang dan malam</p> 
-    <p style="color:#ffffff;">1 Pcs / Rp 35,000 (30 ML)</p> 
-    <p style="color:#ffffff;">3 Pcs / Rp 100,000 (30 ML)</p> 
+    </br>
+    <p style="color:#ffffff;text-align: center;"><b>Sisa waktu peluncuran harga</b></p> 
+    <p id="rulis" style="color:#ff0000;text-align: center;"></p>
    </div>
 </div>
 </div>
    </br>
    <center>
-   <h2 class="ft2">Order WA</h2>
+   <h2 class="ft2">Order WA</h2><p id="rulis" style="color:#ffffff;"></p>
    
 	<a href="https://api.whatsapp.com/send?phone=6281311722836&text=Halo saya ingin membeli Reiny Parfume">
         <button class="btn">Admin 1</button>
@@ -163,13 +164,32 @@ border: solid 1px #0066cc;
     <a href="https://api.whatsapp.com/send?phone=6282258588653&text=Halo saya ingin membeli Reiny Parfume">
         <button class="btn">Admin 2</button>
     </a>
+    
    </center>
    </br>
+   
       </br>
       </br>
 <center>
    		<h4 class="ft3">Copyright 2024 by Reiny Parfume</h4>
    </center>
    </br>
+<script>
+var countDownDate = new Date("Jul 14, 2024 20:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("rulis").innerHTML = days + " Hari " + hours + " Jam "
+  + minutes + " Menit "; 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("rulis").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 </body>
 </html>
